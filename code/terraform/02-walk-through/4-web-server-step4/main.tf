@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">= 3.3.0"
-    }
-  }
-  required_version = ">= 0.14, <= 0.14.8"
-}
-
-provider "aws" {
-  region = "us-east-2"
-}
 
 resource "aws_launch_configuration" "example" {
   image_id        = "ami-0c55b159cbfafe1f0"
@@ -68,7 +55,7 @@ data "aws_subnet_ids" "default" {
 
 resource "aws_lb" "example" {
 
-  name               = var.alb_name
+  name = var.alb_name
 
   load_balancer_type = "application"
   subnets            = data.aws_subnet_ids.default.ids
@@ -118,7 +105,9 @@ resource "aws_lb_listener_rule" "asg" {
   condition {
     path_pattern {
       values = ["*"]
+
     }
+    
   }
 
   action {
