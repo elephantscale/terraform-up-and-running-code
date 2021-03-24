@@ -8,7 +8,7 @@ variable "name" {
 }
 
 output "if_else_directive" {
-  value = "Hello, %{ if var.name != "" }${var.name}%{ else }(unnamed)%{ endif }"
+  value = "Hello, { if var.name != "" }${var.name}{ else }(unnamed){ endif }"
 }
 
 variable "names" {
