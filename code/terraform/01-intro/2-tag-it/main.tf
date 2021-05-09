@@ -10,7 +10,6 @@ terraform {
 
 provider "aws" {
   region = "us-east-2"
-  profile = "dev1"
 }
 
 resource "aws_instance" "example" {

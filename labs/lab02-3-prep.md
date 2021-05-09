@@ -1,7 +1,7 @@
 # Lab 02-3-prep: Learn to work with the load balancer
 
 ### Overview
-* Create two insances
+* Create two instances
 * Connect to them through the load balancer
 
 ![](../code/terraform/resources/images/load-balancer.png)

@@ -1,12 +1,13 @@
 terraform {
-  required_version = ">= 0.12, <= 0.14.8"
+  required_version = ">= 0.12"
 }
 
 provider "aws" {
   region = "us-east-2"
+  profile = "dev1"
 
   # Allow any 2.x version of the AWS provider
-  version = "~> 2.0"
+
 }
 
 resource "aws_s3_bucket" "terraform_state" {
