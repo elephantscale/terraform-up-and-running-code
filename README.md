@@ -35,3 +35,9 @@ This code is released under the MIT License. See LICENSE.txt.
 
     git pull https://github.com/brikis98/terraform-up-and-running-code.git master
     
+## To run on AWS Shell
+
+* Login to AWS
+* Start the shell
+* Install terraform (https://intelligentsysadmin.wordpress.com/2021/01/08/aws-cloudshell-and-terraform/)
+
